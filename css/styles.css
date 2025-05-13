@@ -1,0 +1,21 @@
+body, h1 { font-family: "Montserrat", sans-serif }
+img { margin-bottom: -7px }
+.w3-row-padding img { margin-bottom: 12px }
+
+.select-row {
+  display: flex;
+  gap: 10px;
+}
+
+.date-select {
+  flex: 1;
+}
+
+.date-select select {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+}
