@@ -15,69 +15,75 @@
 </head>
 <body>
 
-  <div class="w3-content" style="max-width:1200px; padding-top: 100px;">
+  <div class="main-container">
+    <div class="html-pure">
+      <div class="w3-content" style="max-width:1200px; padding-top: 100px;">
 
-    <!-- Encabezado -->
-    <div class="w3-opacity">
-      <header class="w3-center w3-margin-bottom">
-        <h1><b>Formulario</b></h1>
-      </header>
-    </div>
-
-    <!-- Contenedor de Formulario -->
-    <div class="w3-container w3-padding-32">
-      <form id="formulario" action="/action_page.php" method="post">
-        
-        <label for="nombre">Nombre completo</label>
-        <input class="w3-input w3-border" type="text" id="nombre" name="nombre" required>
-
-        <label for="fecha_nacimiento">Fecha de nacimiento</label>
-
-        <div class="select-row">
-          <div class="date-select">
-            <select class="w3-select w3-border" id="dia" name="dia" required>
-              <option value="" disabled selected>Día</option>
-              <!--
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              -->
-            </select>
-          </div>
-
-          <div class="date-select">
-            <select class="w3-select w3-border" id="mes" name="mes" required>
-              <option value="" disabled selected>Mes</option>
-              <!--
-              <option value="Enero">Enero</option>
-              <option value="Febrero">Febrero</option>
-              <option value="Marzo">Marzo</option>
-              -->
-            </select>
-          </div>
-
-          <div class="date-select">
-            <select class="w3-select w3-border" id="anio" name="anio" required>
-              <option value="" disabled selected>Año</option>
-              <!-- <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option> -->
-            </select>
-
-          </div>
+        <!-- Encabezado -->
+        <div class="w3-opacity">
+          <header class="w3-center w3-margin-bottom">
+            <h1><b>Formulario</b></h1>
+          </header>
         </div>
-
-        <label for="email">Correo electrónico</label>
-        <input class="w3-input w3-border" id="email" name="email" required>
-
-        <label for="ciudad">Ciudad de nacimiento</label>
-        <input class="w3-input w3-border" type="text" id="ciudad" name="ciudad" required>
-
-        <label for="motivo">¿Por qué quieres suscribirte?</label>
-        <textarea class="w3-input w3-border" id="motivo" name="motivo" rows="4" required></textarea>
-
-        <button id="enviar" class="w3-button w3-black w3-margin-top" type="submit">Enviar</button>
-      </form>
+    
+        <!-- Contenedor de Formulario -->
+        <div class="w3-container w3-padding-32">
+          <form id="formulario" action="/action_page.php" method="post">
+            
+            <label for="nombre">Nombre completo</label>
+            <input class="w3-input w3-border" type="text" id="nombre" name="nombre" required>
+    
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+    
+            <div class="select-row">
+              <div class="date-select">
+                <select class="w3-select w3-border" id="dia" name="dia" required>
+                  <option value="" disabled selected>Día</option>
+                  <!--
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  -->
+                </select>
+              </div>
+    
+              <div class="date-select">
+                <select class="w3-select w3-border" id="mes" name="mes" required>
+                  <option value="" disabled selected>Mes</option>
+                  <!--
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  -->
+                </select>
+              </div>
+    
+              <div class="date-select">
+                <select class="w3-select w3-border" id="anio" name="anio" required>
+                  <option value="" disabled selected>Año</option>
+                  <!-- <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option> -->
+                </select>
+    
+              </div>
+            </div>
+    
+            <label for="email">Correo electrónico</label>
+            <input class="w3-input w3-border" id="email" name="email" required>
+    
+            <label for="ciudad">Ciudad de nacimiento</label>
+            <input class="w3-input w3-border" type="text" id="ciudad" name="ciudad" required>
+    
+            <label for="motivo">¿Por qué quieres suscribirte?</label>
+            <textarea class="w3-input w3-border" id="motivo" name="motivo" rows="4" required></textarea>
+    
+            <button id="enviar" class="w3-button w3-black w3-margin-top" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="js-dom" id="js-dom">
     </div>
   </div>
 
