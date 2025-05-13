@@ -1,0 +1,182 @@
+a#navbar{
+    color: rgb(0, 42, 230);
+}
+a#navbar_regresar{
+    color: rgb(0, 42, 230);
+}
+a#navbar_mov{
+    color: rgb(0, 42, 230);
+}
+a#navbar_saldos{
+    color: rgb(0, 42, 230);
+}
+p#fecha{
+    color: rgb(0, 42, 230);
+    font-size: 18px;
+}
+p#subtitulos{
+    color: rgb(0, 42, 230);
+    font-size: 21px;
+}
+p#subsubtitulos{
+    color: rgb(0, 42, 230);
+    font-size: 18px;
+}
+h1{
+    color: rgb(0, 42, 230);
+    text-align: center;
+}
+h3{
+    color: rgb(0, 42, 230);
+    text-align: center;
+}
+.encabezado_tabla{
+    background-color: rgb(1, 1, 141);
+    color: aliceblue;
+}
+        /*
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #333;
+            font-family: sans-serif;
+        }
+        
+        .container {
+            perspective: 800px;
+        }*/
+                    :root {
+                        --accent: rgb(0,162,255);
+                        --border-width: 6px;
+                        --border-radius: 55px;
+                        --font-size: 12px;
+                    }
+
+.toggle {
+    position: relative;
+    border: solid var(--border-width) var(--accent);
+    border-radius: var(--border-radius);
+    transition: transform cubic-bezier(0, 0, 0.30, 2) .4s;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    width: 360px;
+    height: 50px;
+    left:30px;
+}
+
+.toggle>input[type="radio"] {
+    display: none;
+}
+
+.toggle>#choice1:checked~#flap {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#choice1:checked~#flap>.content {
+    transform: rotateY(-180deg);
+}
+
+.toggle>#choice2:checked~#flap {
+    transform: rotateY(0deg);
+}
+
+.toggle>label {
+    display: inline-block;
+    min-width: 100px;
+    padding: 9px;
+    font-size: var(--font-size);
+    text-align: center;
+    color: var(--accent);
+    cursor: pointer;
+}
+.toggle>label>#lbl2 {
+    display: inline-block;
+    min-width: 100px;
+    padding: 19px;
+    font-size: var(--font-size);
+    text-align: right;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.toggle>label,
+.toggle>#flap {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.toggle>#flap {
+    position: absolute;
+    top: calc( 0px - var(--border-width));
+    left: 50%;
+    height: calc(100% + var(--border-width) * 2);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+    background-color: var(--accent);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) .5s;
+}
+
+.toggle>#flap>.content {
+    color: rgb(72, 255, 0);
+    transition: transform 0s linear .25s;
+    transform-style: preserve-3d;
+}
+
+.fecha-row{
+    width: 206px;
+}
+
+.vendedor-row{
+    width: 406px;
+}
+
+.nombre-cliente-row{
+    width: 363px;
+}
+
+.t-dolares-row{
+    width: 276px;
+}
+
+.moneda-row{
+    width: 206px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+  }
+  .btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }
+
+  .modal-options{
+    margin-left: 100px;
+  }
+
+  .first-option{
+      margin-right: 100px;
+  }
+
+ 

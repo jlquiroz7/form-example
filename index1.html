@@ -849,7 +849,7 @@
                 <div class="modal-body">
                     <span ng-show="autorizacion">Al ser autorizado el precio {{precio_input}} recibirá un correo </span>
                     <div class="input-group mb-3" ng-show="!autorizacion">
-                        <input type="text" style="margin-left: 142px;" id="precio_input" ng-model="precio_input" >
+                        <input type="text" style="margin-left: 142px;" id="precio_input" ng-model="precio_input">
                     </div>
                     <div class="alert alert-danger alert-dismissible" id="alertPrecio" role="alert">
                         <strong>{{message_alert}}</strong>
@@ -1080,26 +1080,21 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">Vendedor : </span>
                             </div>
-                            <!-- 
-<select class="btn dropdown-toggle" ng-model="catalogo_excel.vendedor" style="border-color: #e9ecef;"
-ng-options="prov.NOMBRE for prov in vendedores_catalogo">
-</select> -->
                             <select class="btn dropdown-toggle" ng-model="catalogo_excel.vendedor" style="border-color: #e9ecef;"
-                                ng-options="prov.NOMBRE for prov in vendedores_catalogo">
-                            </select>
+                                    ng-options="prov.NOMBRE for prov in vendedores_catalogo">
+                                </select>
                         </div>
-                        <!--<div class="input-group mb-3">
+                        <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Enviar a :</span>
                             </div>
                             <input type="text" class="form-control" placeholder="plosa@gmail.com" ng-model="catalogo_excel.mail" aria-describedby="basic-addon3">
-                        </div>-->
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-success" type="button" ng-click="sendReportClientsExcel(true)"> TODOS </button>
                     <button type="button" class="btn btn-warning" style="height: 40px;" data-dismiss="modal">CANCELAR</button>
-                    <button class="btn btn-success" type="button" ng-click="sendReportClientsExcel(false)"> GENERAR </button>
+                    <button class="btn btn-success" type="button" ng-click="sendReportClientsExcel()"> ENVIAR </button>
                 </div>
             </div>
         </div>
@@ -1214,15 +1209,13 @@ ng-options="prov.NOMBRE for prov in vendedores_catalogo">
     <!-- MENU HTML  -->
     <!--img src="img/Plosa.png" style="margin-left: 155px;margin-top: 50px;position: absolute;" class="rounded-circle img-responsive" -->
     <div class="container card border border-dark" id="marcoGeneral" style="margin-top: 10px;display: none;">
-        <div class="header-notas-comer">
-            <img src="img/Plosa.png" width="50" height="50" class="d-inline-block align-top" alt="">
-            <p class="sucursal-notas-comer">COMERCIALIZADORA DE ALIMENTOS OCHOA S.A. DE C.V</p>
-            <button type="button" class="btn btn-go-back"
-                style="color: #fdfdfd; background: rgb(165, 165, 165) ;height: 36px; margin-top:-112px; margin-left: 1040px;"
-                ng-click="cerrarSession()">
-                <label>Salir</label>
-            </button>
-        </div>
+        <img src="img/Plosa.png" width="50" height="50" class="d-inline-block align-top" alt="">
+        <p class="sucursal">COMERCIALIZADORA DE ALIMENTOS OCHOA S.A. DE C.V</p>
+        <button type="button" class="btn"
+            style="color: #fdfdfd; background: rgb(165, 165, 165) ;height: 36px; margin-top:-112px; margin-left: 1040px;"
+            ng-click="cerrarSession()">
+            <label>Salir</label>
+        </button>
         <br>
         
         <div class="row">
@@ -1356,19 +1349,17 @@ ng-options="prov.NOMBRE for prov in vendedores_catalogo">
 
         </div>
 
-        <div class="d-flex justify-content-between"
-            style="margin-top: 40px;"
-        >
-            <div class="btn-notas-comer">
-                <button type="button" class="btn-3d orange-btn"
-                    style="color: #fdfdfd; background: rgb(255, 179, 0) ;height: 40px;"
+        <div class="d-flex justify-content-between">
+            <div class="col-2">
+                <button type="button" class="btn"
+                    style="color: #fdfdfd; background: rgb(255, 179, 0) ;height: 40px; margin-top:40px"
                     ng-click="printNote()">
                     <label>REIMPRIMIR NOTA</label>
                 </button>
             </div>
 
-            <div class="btn-notas-comer"> 
-                <button type="button" class="btn-3d pink-btn" ng-click="showVentas()"  style="color: #fdfdfd; background: rgb(255, 0, 76) ;height: 40px;">VER NOTAS</button>
+            <div class="col-2"> 
+                <button type="button" class="btn" ng-click="showVentas()"  style="color: #fdfdfd; background: rgb(255, 0, 76) ;height: 40px; margin-top:40px">VER NOTAS</button>
             </div>
             <!--div class="col-2" ng-show="!hasClient">
                 <button type="button" class="btn"
@@ -1378,49 +1369,49 @@ ng-options="prov.NOMBRE for prov in vendedores_catalogo">
                 </button>
             </div-->
 
-            <div class="btn-notas-comer" ng-show="!hasClient">
-                <button type="button" class="btn-3d green-btn"
-                    style="color: #fdfdfd; background: rgb(35, 173, 0) ;height: 40px;"
+            <div class="col-2" ng-show="!hasClient">
+                <button type="button" class="btn"
+                    style="color: #fdfdfd; background: rgb(35, 173, 0) ;height: 40px; margin-top:40px"
                     ng-click="showRutass()">
                     <label> <strong>ASIGNAR RUTAS </strong> </label>
                 </button>
             </div>
 
-            <div class="btn-notas-comer" ng-show="!hasClient">
-                <button type="button" class="btn-3d pink-neon-btn"
-                    style="color: #fdfdfd; background: rgb(255, 48, 220) ;height: 40px;"
+            <div class="col-2" ng-show="!hasClient">
+                <button type="button" class="btn"
+                    style="color: #fdfdfd; background: rgb(255, 48, 220) ;height: 40px; margin-top:40px"
                     data-toggle="modal" data-target="#catalogo_excel_modal">
                     <label> <strong>CATALOGO EXCEL</strong> </label>
                 </button>
             </div>
 
             <div class="col-2">
-                <button type="button" class="btn" ng-show="false"
+                <button type="button" class="btn"
                     style="color: #fdfdfd; background: rgb(0, 4, 255) ;height: 40px; margin-top:40px"
                     ng-click="showCobros()">
                     <label> {{accion_cobros}} </label>
                 </button>
             </div>
 
-            <div class="btn-notas-comer">
-                <button type="button" class="btn-3d green-dark-btn" ng-show="hasClient"
-                    style="color: #fdfdfd; background: rgb(74, 131, 74) ;height: 40px;"
+            <div class="col-2">
+                <button type="button" class="btn" ng-show="hasClient"
+                    style="color: #fdfdfd; background: rgb(74, 131, 74) ;height: 40px; margin-top:40px"
                     ng-click="fixNote()">
                     <label> CORREGIR NOTA </label>
                 </button>
             </div>
 
-            <div class="btn-notas-comer" ng-show="hasClient">
-                <button type="button" class="btn-3d pink-light-btn"
-                    style="color: #fdfdfd; background: rgb(255, 154, 247) ;height: 40px;"
+            <div class="col-2" ng-show="hasClient">
+                <button type="button" class="btn"
+                    style="color: #fdfdfd; background: rgb(255, 154, 247) ;height: 40px; margin-top:40px"
                     ng-click="limpiarObjetos()">
                     <label> <strong>ANULAR NOTA</strong> </label>
                 </button>
             </div>
 
-            <div class="btn-notas-comer" ng-show="totalizar&&hasClient">
-                <button type="button" class="btn-3d purple-neon-btn "
-                    style="color: #fdfdfd; background: rgb(142, 55, 255) ;height: 40px;"
+            <div class="col-2" ng-show="totalizar&&hasClient">
+                <button type="button" class="btn"
+                    style="color: #fdfdfd; background: rgb(142, 55, 255) ;height: 40px; margin-top:40px"
                     ng-click="totalizarNota()">
                     <label >TOTALIZAR NOTA</label>
                 </button>
